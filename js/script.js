@@ -65,7 +65,7 @@ function setup(currentPage, liArray) {
   //display li tags that belong on current page
   for (let i = 0; i < liArray.length; i++) {
     if (i >= lowerLimit && i < upperLimit) {
-      $('.student-item').eq(liArray[i]).fadeIn();
+      $('.student-item').eq(liArray[i]).show();
     }//end of if statement
   }//end of for loop
 }//end of function
@@ -83,9 +83,11 @@ $(".page-header")
 $('#search').keyup(keyupEvent);
 
 /*keyupEvent function summary
-1.
-2.
-3.*/
+1.A keyup call back function, is used to dynamicly gather the input characters
+2.A for loop gathers the characters from the h3 tags, and checks if the
+  characters match the input.
+3.setup and appendPageLinks functions are updated with new parameters
+4.If no matches are returned, an error page is loaded */
 function keyupEvent (){
   //remove student counter
   $('.count').remove();
