@@ -167,3 +167,7 @@ body{
   font-size: 30px;
   margin: 1%;
 }
+
+h3{
+ text-transform: capitalize;
+}
